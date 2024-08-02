@@ -1,27 +1,23 @@
-import { defineConfig } from 'vitepress'
+import { SiteConfig, defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: "VitePress Sample",
-    description: "A VitePress Site",
+    title: "Hanyi's blog",
+    description: "记录一些知识",
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
+        search: {
+            provider: 'local'
+        },
+        outline:{
+            label:'导览'
+        },
         nav: [
-            { text: 'Home', link: '/' },
+            { text: '主页', link: '/' },
+            { text: '归档', link: '/pages/archive' },
+            { text: '分类', link: '/pages/category' },
+            { text: '标签', link: '/pages/tags' },
+            { text: '关于', link: '/pages/about' },
         ],
-
-        sidebar: [
-            {
-                text: 'Examples',
-                items: [
-                    { text: 'Markdown Examples', link: '/markdown-examples' },
-                    { text: 'Runtime API Examples', link: '/api-examples' }
-                ]
-            }
-        ],
-
-        socialLinks: [
-            { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-        ]
-    }
+    },
 })

@@ -1,0 +1,42 @@
+/** 更多 按钮 */
+.more {
+    font-size: 0.8em;
+    color: var(--vp-c-text-2);
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    background-color: var(--vp-c-bg-alt);
+}
+
+
+.filter-tag {
+    padding: 14px 0 8px 0;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.filter-title {
+    padding: 4px 0 4px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+    color: var(--vp-c-text-3);
+}
+
+/* :deep(.VPDocAsideOutline){
+    display: block !important;
+} */
+
+/** 右侧导航栏标签 */
+.filter-side {
+    line-height: 32px;
+    color: var(--vp-c-text-2);
+    cursor: pointer;
+}
+
+.filter-side:hover,
+.filter-side.active {
+    color: var(--vp-c-text-1);
+    transition: color 0.25s;
+}
