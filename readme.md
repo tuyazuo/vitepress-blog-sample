@@ -13,14 +13,14 @@
 │  │  ├─ custom.css         #样式
 │  │  ├─ index.ts           #主题入口
 │  │  └─ posts.data.ts      #文档数据收集
-├─ config.mts               #配置文件
+│  └─ config.mts            #配置文件
 ├─ index.md                 #主页页面
 ├─ pages                    #组件对应页面
 ├─ posts                    #文档目录
 └─ package.json
 ```
 
-## 主题修改
+## 主题扩展
 极简、实用原则，不修改原主题，尽可能少地扩展。
 - packages.json中配置"type": "module"
 - *.data.ts文件，VitePress提供的数据加载功能，收集文档数据，是后面功能实现的基础。
