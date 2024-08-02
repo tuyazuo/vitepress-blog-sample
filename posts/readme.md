@@ -47,3 +47,7 @@ tags: [帮助]
 #### 创建数据表  
 可以提前写好sql文件（或使用数据库GUI工具设计并导出结构），执行以下语句创建  
 npx wrangler d1 execute [database] --remote --file=./schema.sql
+
+#### 自动上传发布页面
+npx wrangler pages deploy ./.vitepress/dist --project-name blog --branch main  
+注意：带--branch main才会发布到生成环境，否则会发布到测试环境

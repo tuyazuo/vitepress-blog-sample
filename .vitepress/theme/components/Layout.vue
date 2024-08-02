@@ -52,13 +52,13 @@
         </template>
 
         <template #doc-after>
-            <!-- <Comment v-if="frontmatter.date" /> -->
+            <Comment v-if="frontmatter.date" />
         </template>
     </Layout>
 </template>
 
 <script setup lang="ts">
-// import Comment from './Comment.vue'
+import Comment from './Comment.vue'
 import { useData, withBase } from 'vitepress';
 import DefaultTheme from 'vitepress/theme'
 const { Layout } = DefaultTheme

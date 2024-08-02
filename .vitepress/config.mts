@@ -1,3 +1,4 @@
+import fs from 'fs'
 import { SiteConfig, defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
@@ -20,4 +21,9 @@ export default defineConfig({
             { text: '关于', link: '/pages/about' },
         ],
     },
+    buildEnd: (site: SiteConfig)=>{
+        //cloudflare d1数据库接口
+        if(fs.existsSync('./_worker.js'))
+            fs.copyFileSync('./_worker.js', site.outDir + '/_worker.js')
+    }
 })
